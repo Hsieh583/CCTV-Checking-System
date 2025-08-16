@@ -1,0 +1,46 @@
+{
+  "alert_rules": {
+    "suppression_window_minutes": 10,
+    "escalation_rules": {
+      "yellow_to_red_threshold": 3,
+      "consecutive_failures": 5
+    },
+    "notification_channels": {
+      "email": {
+        "enabled": true,
+        "recipients": ["admin@company.com"],
+        "smtp_config": {
+          "host": "smtp.company.com",
+          "port": 587,
+          "secure": false
+        }
+      },
+      "line": {
+        "enabled": false,
+        "webhook_url": ""
+      }
+    },
+    "business_hours": {
+      "enabled": true,
+      "timezone": "Asia/Taipei",
+      "weekdays": {
+        "start": "08:00",
+        "end": "18:00"
+      },
+      "weekend": {
+        "start": "09:00",
+        "end": "17:00"
+      }
+    },
+    "severity_rules": {
+      "red": {
+        "always_notify": true,
+        "max_frequency_minutes": 30
+      },
+      "yellow": {
+        "business_hours_only": true,
+        "max_frequency_minutes": 60
+      }
+    }
+  }
+}

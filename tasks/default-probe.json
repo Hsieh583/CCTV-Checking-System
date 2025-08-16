@@ -1,0 +1,39 @@
+{
+  "name": "default-health-check",
+  "description": "預設健康檢查任務",
+  "schedule": "*/5 * * * *",
+  "timeout": 5000,
+  "checks": {
+    "tcp_ports": {
+      "enabled": true,
+      "ports": ["http_port", "https_port", "rtsp_port", "onvif_port"],
+      "timeout": 3000
+    },
+    "rtsp": {
+      "enabled": true,
+      "timeout": 5000,
+      "method": "OPTIONS"
+    },
+    "onvif": {
+      "enabled": true,
+      "timeout": 5000,
+      "soap_action": "GetCapabilities"
+    },
+    "ping": {
+      "enabled": false,
+      "count": 3,
+      "timeout": 1000
+    }
+  },
+  "scoring": {
+    "tcp_weight": 40,
+    "rtsp_weight": 30,
+    "onvif_weight": 20,
+    "ping_weight": 10
+  },
+  "thresholds": {
+    "green": 80,
+    "yellow": 60,
+    "red": 40
+  }
+}

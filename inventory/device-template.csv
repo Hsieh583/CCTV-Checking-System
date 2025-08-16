@@ -1,0 +1,5 @@
+site_name,type,mgmt_ip,brand,model,fw_version,vlan,onvif_port,rtsp_port,http_port,https_port,notes,poe_switch_ip,poe_port
+總部,ipcam,192.168.1.100,Hikvision,DS-2CD2385FWD-I,V5.6.3,100,8000,554,80,443,大門攝影機,192.168.1.10,1
+總部,ipcam,192.168.1.101,Dahua,IPC-HFW4431R-Z,2.800.0000000.18.R,100,80,554,80,443,停車場攝影機,192.168.1.10,2
+分店A,nvr,192.168.2.10,Synology,DS920+,DSM 7.0,200,5000,554,5000,5001,4路NVR主機,,
+分店A,ipcam,192.168.2.100,Axis,M3046-V,9.80.1,200,80,554,80,443,櫃台攝影機,192.168.2.1,5
