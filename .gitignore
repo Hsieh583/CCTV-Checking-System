@@ -122,3 +122,8 @@ Thumbs.db
 # Windows
 $RECYCLE.BIN/
 Desktop.ini
+
+# Claude Code 暫存檔
+.claude/
+tmpclaude-*
+nul

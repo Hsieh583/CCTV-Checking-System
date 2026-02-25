@@ -4,8 +4,9 @@
   "description": "IP Camera and NVR Health Monitoring System",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "init": "node init.js",
+    "start": "node init.js && node server.js",
+    "dev": "node init.js && nodemon server.js",
     "test": "jest"
   },
   "dependencies": {
